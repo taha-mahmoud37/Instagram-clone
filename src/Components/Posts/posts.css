@@ -1,0 +1,29 @@
+
+
+
+.posts {
+    background-color: #fff;
+    border: 1px solid lightgray;
+    max-width: 500px;
+    
+}
+
+.posts-header {
+    padding: 20px 10px;
+}
+.posts-header .avatar {
+    margin-right: 10px;
+}
+
+.img-body {
+    width: 100%;
+    object-fit: contain;
+}
+
+.footer {
+    padding: 20px 10px;
+}
+
+.footer strong {
+    margin-right: 5px;
+}

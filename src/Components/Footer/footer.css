@@ -1,0 +1,27 @@
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    border-top: 1px solid lightgray;
+    padding: 2px;
+    background-color: #fff;
+
+}
+
+
+footer .links {
+  color: var(--main-color) !important;
+  text-decoration: none;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+footer .add-post {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.links:nth-child(1) {
+  color: #000;
+}

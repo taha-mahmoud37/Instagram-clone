@@ -1,0 +1,24 @@
+
+
+.img-upload {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.upload {
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #0095f6;
+}
+
+.form-control {
+    outline: none;
+    box-shadow: none !important;
+}
+

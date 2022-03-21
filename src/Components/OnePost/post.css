@@ -1,0 +1,95 @@
+
+
+
+.posts {
+    background-color: #fff;
+    border: 1px solid lightgray;
+    max-width: 500px;
+    position: relative;
+    
+}
+
+.container-m {
+    position: relative;
+}
+
+.posts-header {
+    padding: 20px 10px;
+}
+.posts-header .avatar {
+    margin-right: 10px;
+}
+
+.img-body {
+    width: 100%;
+    object-fit: contain;
+}
+
+.footer h4 {
+    padding: 20px 10px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.footer strong {
+    margin-right: 2px;
+    font-weight: 500;
+}
+
+
+.interaction {
+    padding: 5px 10px;
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.interaction .icon {
+    font-size: 22px;
+    font-weight: 600;
+    color: #000;
+    
+}
+
+.interaction .icon::nth-child(2) {
+    transform: rotate(190deg);
+}
+
+.delete {
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.popup {
+    position: absolute;
+    top: 15px;
+    right: 50px;
+    background-color: #fff;
+    padding: 5px 15px;
+    color: #000;
+    font-size: 18px;
+    border-radius: 2px 2px 2px ;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    display: none;
+    transition: .4s ease;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    
+}
+
+.show {
+    display: block;
+}
+
+.col {
+    color: rgb(237, 73, 86);
+}

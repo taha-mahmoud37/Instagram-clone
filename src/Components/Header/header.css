@@ -1,0 +1,22 @@
+
+.header-main {
+    border-bottom: 1px solid lightgray;
+    background-color: #fff;
+    width: 100%;
+}
+
+
+.header {
+    width: 100%;
+    object-fit: contain;
+}
+
+.app-logo {
+    max-width: 30%;
+}
+
+.header .size {
+    font-size: 25px;
+    color: var(--main-color);
+}
+
