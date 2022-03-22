@@ -5,13 +5,14 @@
 <br>
 
 1. for **firebase**, I am using some functions.
+
    1. initializeApp: for initializing app with firebase.
    <br>
-   1. getAuth: for creat Authentication like SignUp, SignIn, SignOut.
+   2. getAuth: for creat Authentication like SignUp, SignIn, SignOut.
    <br>
-   1. getFirestore: for holding your application database.
+   3. getFirestore: for holding your application database.
    <br>
-   1. getStorage: this allows us to add some data or what we need to firebase.
+   4. getStorage: this allows us to add some data or what we need to firebase.
    
 
 Also, we import other methods like collection, onSnapshot to deal with data in firebase.
@@ -19,6 +20,7 @@ Also, we import other methods like collection, onSnapshot to deal with data in f
 <br>
 
 1. for **Reactjs** 
+
     1. we imported react-router-dom: for navigating between pages.
     <br>
     2. we used Aos library for Animations.
