@@ -9,12 +9,13 @@ import {
 } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
+
+// initialValues for all inputs
 const initialValues = {
   name: "",
   email: "",
   password: "",
 };
-
 
 
 /* const validate = (values) => {
@@ -37,6 +38,8 @@ const initialValues = {
   return errors;
 }; */
 
+
+// here validationSchema for handle user signup
 const validationSchema = Yup.object({
   name: Yup.string().required('Required'),
   email: Yup.string().email('Invalid email address').required('Required'),
@@ -45,9 +48,12 @@ const validationSchema = Yup.object({
 
 function Signup() {
 
+  // useNavigate for navigate to another page
   const navigate = useNavigate();
   const [user, setUser] = useState({});
 
+
+ // usefromik we used for handle form for us
   const formik = useFormik({
     initialValues,
     onSubmit : (values) => {
@@ -56,9 +62,12 @@ function Signup() {
     validationSchema,
   });
 
+
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
   });
+
+  // to handle user Sign up with email and password and username
 
   const signUp = (event) => {
     event.preventDefault();
@@ -131,19 +140,14 @@ function Signup() {
           </div>
 
           <input data-aos="fade-up" data-aos-duration="1500"
-            disabled = {!formik.isValid}
+            disabled = {!(formik.dirty && formik.isValid)}
             onClick={signUp}
-            className="submit"
+            className="submited"
             type="submit"
             value="Sign up"
           />
         </form>
-        <div className="policy" data-aos="fade-up" data-aos-duration="1500">
-          <p>
-            By signing up, you agree to our <span> Terms </span> ,{" "}
-            <span> Data Policy </span> and <span> Cookies Policy </span> .
-          </p>
-        </div>
+        
       </div>
       <section className="have-account" >
         <p>

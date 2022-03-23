@@ -6,12 +6,16 @@ import { auth } from "../../Firebase";
 import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
+
+// initialValues for all inputs
 const initialValues = {
   name: "",
   email: "",
   password: "",
 };
 
+
+// here validationSchema for handle user signin
 const validationSchema = Yup.object({
   email: Yup.string().email("Invalid email address").required("Required"),
   password: Yup.string().required("Required"),
@@ -19,6 +23,7 @@ const validationSchema = Yup.object({
 
 function Login() {
 
+  // usefromik we used for handle form for us
   const formikSignIn = useFormik({
     initialValues,
     onSubmit: (values) => {
@@ -26,14 +31,19 @@ function Login() {
     },
     validationSchema,
   });
+ 
 
+  // useNavigate for navigate to another page
   const navigate = useNavigate();
   const [user, setUser] = useState({});
 
+ 
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
   });
 
+
+// to handle user Sign in with email and password
   const signIn = (event) => {
     event.preventDefault();
     try {
@@ -48,6 +58,8 @@ function Login() {
       console.log(error.message);
     }
   };
+
+
 
   return (
     <section className="container pt-5 signin">

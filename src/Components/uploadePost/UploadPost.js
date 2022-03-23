@@ -5,21 +5,25 @@ import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 
+
 function UploadPost() {
+  // we use useState to handle change in input values
   const [caption, setCaption] = useState("");
   const [username, setUsername] = useState("");
   const [progress, setProgress] = useState(0);
   const [img, setImage] = useState(null);
   const navigate = useNavigate();
 
+  // to handle files we uploaded to app
   const handleChange = (e) => {
     const file = e.target.files[0];
     setImage(file);
   };
+
+  /* handleUpload we use it for handle upload post into firebase*/
   const handleUpload = () => {
     const storageRef = ref(storage, `/public/images/${img.name}`);
     const uploadTask = uploadBytesResumable(storageRef, img);
-    console.log(img);
     uploadTask.on(
       "state_changed",
       (snapshot) => {

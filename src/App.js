@@ -5,6 +5,7 @@ import Posts from './Components/Posts/Posts';
 import Signup from './Components/SignUp/Signup';
 import UploadPost from './Components/uploadePost/UploadPost';
 import Footer from './Components/Footer/Footer';
+import NotFound from './Components/NotFound/NotFound';
 import {BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom';
 import Login from './Components/Login/Login';
 import  Aos  from 'aos';
@@ -34,6 +35,7 @@ function App() {
           <Route path='/signup' element ={<Signup />} />
           <Route path='/posts' element ={ <Posts />} />
           <Route path='/login' element ={ <Login /> } />
+          <Route path='*' element={<NotFound />} />
           
       </Routes>
       <Footer />

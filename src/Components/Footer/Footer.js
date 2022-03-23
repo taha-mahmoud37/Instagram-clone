@@ -27,7 +27,7 @@ function Footer() {
                 <Avatar 
                 className='avatar'
                 alt="Cindy Baker" 
-                src="/static/images/avatar/3.jpg" 
+                src='/public/logo-instagram.webp'
                 
                 />
              </Link>

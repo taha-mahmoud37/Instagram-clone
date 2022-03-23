@@ -7,7 +7,7 @@ import { FiSend } from "react-icons/fi";
 
 
 
-function Post({ userName, imgUrl, caption, userId }) {
+function Post({ userName, imgUrl, caption }) {
 
   
  /* const display = () => { 
@@ -21,6 +21,8 @@ function Post({ userName, imgUrl, caption, userId }) {
   deleteDoc(doc(db, 'posts', userId))
  }
  */
+
+ // this component used for dispaly data return from firebase in browser, we return (userName, imgUrl, caption)
   return (
     <section
       className="posts py-3 my-4"
