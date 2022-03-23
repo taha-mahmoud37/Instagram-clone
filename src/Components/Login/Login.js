@@ -103,7 +103,7 @@ function Login() {
           </div>
 
           <input data-aos="fade-up" data-aos-duration="1500"
-            disabled={!formikSignIn.isValid}
+            disabled={!(formikSignIn.dirty && formikSignIn.isValid)}
             onClick={signIn}
             className="submit"
             type="submit"
