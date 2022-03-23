@@ -1,0 +1,21 @@
+
+
+.not-found {
+    text-align: center;
+}
+
+.not-found h2 {
+    font-size: 20px;
+    font-weight: 600;
+    object-fit: cover;
+    padding-bottom: 10px;
+}
+
+.not-found div {
+    font-size: 16px;
+}
+
+.back-home div span {
+    margin-left: 10px;
+    text-decoration: none !important;
+}
