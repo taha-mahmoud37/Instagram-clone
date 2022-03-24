@@ -18,7 +18,7 @@ const initialValues = {
 // here validationSchema for handle user signin
 const validationSchema = Yup.object({
   email: Yup.string().email("Invalid email address").required("Required"),
-  password: Yup.string().required("Required"),
+  password: Yup.string().required("Required").min(5).max(10),
 });
 
 function Login() {
