@@ -16,7 +16,7 @@ function Posts() {
   
 
   useEffect(() => {
-    onSnapshot(collection(db, 'posts'), (snapshot) => {
+   const unsubscribe =  onSnapshot(collection(db, 'posts'), (snapshot) => {
       setPosts(snapshot.docs.map(doc => ({
         ...doc.data(),
         id: doc.id
@@ -24,6 +24,10 @@ function Posts() {
       console.log(snapshot.docs.map(doc => doc.data()))
 
     })
+    
+    return () => {
+      unsubscribe();
+    } 
   }, [])
 
 
