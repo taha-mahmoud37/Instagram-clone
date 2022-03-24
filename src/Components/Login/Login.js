@@ -111,8 +111,8 @@ function Login() {
           />
         </form>
       </div>
-      <section className="dont-have-account" data-aos="fade-up" data-aos-duration="2000">
-        <p>
+      <section className="dont-have-account pt-5" data-aos="fade-up" data-aos-duration="2000">
+        <p className="pt-4">
           Don't have an account?{" "}
           <button onClick={() => navigate("/signup")}> Sign up</button>{" "}
         </p>

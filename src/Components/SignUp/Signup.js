@@ -149,7 +149,7 @@ function Signup() {
         </form>
         
       </div>
-      <section className="have-account" >
+      <section className="have-account pt-4" >
         <p>
           Have an account?{" "}
           <button onClick={() => navigate("/login")}> Log in</button>{" "}
